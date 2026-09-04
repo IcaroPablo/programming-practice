@@ -5,10 +5,11 @@ a programming language. One directory per language, no build system tying them
 together — each file stands on its own and is meant to be read, compiled or run
 by itself.
 
-This repository gathers what used to live in four separate ones
-([java-practice][], [c-language-practice][], [java-dump][] and
-[python-practice][]), so their commit history is preserved here rather than the
-files being copied in fresh.
+This repository gathers what used to live in four separate ones —
+`java-practice`, `c-language-practice`, `java-dump` and `python-practice`. Their
+commit history was merged in rather than the files being copied fresh, so
+`git log --follow` still reaches back to where each file came from. The four
+original repositories have been deleted; this is now the only copy.
 
 ## What's here
 
@@ -80,9 +81,5 @@ developer. You can reach me through the links on [my GitHub page][me].
 
 MIT, see [LICENSE](LICENSE).
 
-[java-practice]: https://github.com/IcaroPablo/java-practice
-[c-language-practice]: https://github.com/IcaroPablo/c-language-practice
-[java-dump]: https://github.com/IcaroPablo/java-dump
-[python-practice]: https://github.com/IcaroPablo/python-practice
 [remake]: https://github.com/IcaroPablo/programming-practice/tree/python-practice-remake
 [me]: https://www.github.com/IcaroPablo
