@@ -7,9 +7,18 @@ by itself.
 
 This repository gathers what used to live in four separate ones —
 `java-practice`, `c-language-practice`, `java-dump` and `python-practice`. Their
-commit history was merged in rather than the files being copied fresh, so
-`git log --follow` still reaches back to where each file came from. The four
-original repositories have been deleted; this is now the only copy.
+commit history was merged in rather than the files being copied fresh, so every
+original commit is still here. The four original repositories have been
+deleted; this is now the only copy.
+
+Because the merge moved each file into a language directory, `git log` on a
+file's current path stops at the merge commit. To read further back, ask for its
+*original* path with `--full-history`:
+
+```sh
+git log --full-history -- fila.c        # c/fila.c, back in c-language-practice
+git log --full-history -- pascal.py     # python/pascal.py, back in python-practice
+```
 
 ## What's here
 
