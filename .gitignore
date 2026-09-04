@@ -1,0 +1,24 @@
+# Compiled output
+*.class
+*.o
+*.out
+*.hi
+a.out
+out/
+target/
+build/
+dist-newstyle/
+
+# Editors and IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Data files produced by running the exercises
+*.bin

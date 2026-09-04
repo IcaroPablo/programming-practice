@@ -1,0 +1,71 @@
+DEFINE safe_first ==
+    [null]
+    []
+    [first]
+    ifte .
+
+DEFINE get_prefix ==
+    [null]
+    [""]
+    [
+        #[size 1 =]
+	#[first]
+	#[
+	#    drop 1
+	#]
+	#ifte
+	1
+    ]
+    ifte .
+
+#[
+#    [["1234" "123" "12345"] "123"]
+#    [["4245" "rt26" "53456"] ""]
+#    [[] ""]
+#    [[""] ""]
+#    [["a"] "a"]
+#]
+
+"1234"
+"123"
+"12345"
+[]
+cons cons cons
+"123"
+[] cons cons
+
+"4245"
+"rt26"
+"53456"
+[]
+cons cons cons
+""
+[] cons cons
+
+[]
+""
+[] cons cons
+
+""
+[]
+cons
+""
+[] cons cons
+
+"a"
+[]
+cons
+"a"
+[] cons cons
+
+[] cons cons cons cons cons
+
+#[] null .
+
+#[dup first get_prefix swap rest first equal] map
+[dup first get_prefix swap] map
+#[dup first safe_first swap] map
+
+stack .
+
+quit
